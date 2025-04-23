@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anthony Adekunle Owoni̇yi CV</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Include html2pdf.js library from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container" id="cv">
+    <aside class="sidebar">
+      <img src="images/p9.jpg" alt="Profile" class="profile-pic" />
+      <div class="section">
+        <h3>CONTACT</h3>
+        <p>Arakale, Akure, Ondo State, Akure,<br>Ondo State</p>
+        <p>📞 +2347046252061</p>
+        <p>✉️ adekunleanthony99@gmail.com</p>
+      </div>
+      <div class="section">
+        <h3>SKILLS</h3>
+        <ul>
+          <li>JavaScript proficiency</li>
+          <li>Back-End frameworks: node.js, django</li>
+          <li>PHP or python experience</li>
+          <li>Responsive Design</li>
+          <li>Graphics editing</li>
+          <li>Team player</li>
+          <li>Problem-solving</li>
+          <li>Team building</li>
+          <li>Programme development</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>LANGUAGES</h3>
+        <p><strong>English</strong><br>Fluent</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <h1>Anthony Adekunle Owoni̇yi</h1>
+      <div class="section">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p>
+          Accomplished professional with extensive expertise in JavaScript, including fluency in various back-end frameworks such as node.js and django. Demonstrates strong proficiency in PHP and Python, coupled with a solid foundation in responsive design and graphics editing. Known for exceptional problem-solving abilities, team building, and programme development skills. A dedicated team player committed to leveraging technical skills to drive innovative solutions and achieve career growth within dynamic environments.
+        </p>
+        <p>
+          Driven web developer with knack for problem-solving and creativity. Proficient in coding languages and web technologies, coupled with strong teamwork and communication skills. Ready to craft innovative digital solutions that enhance user experiences and drive business growth.
+        </p>
+      </div>
+      <div class="section">
+        <h2>WORK HISTORY</h2>
+        <h3>Web developer <span>01/2025</span></h3>
+        <p><strong>Sabi Programmers</strong> – Akure, Akure</p>
+        <ul>
+          <li>Improved website efficiency with the use of JavaScript, HTML and CSS.</li>
+          <li>Integrated various APIs into websites for added functionality.</li>
+          <li>Managed hosting environments including database administration and scaling applications to handle load changes.</li>
+          <li>Solved cross-browser compatibility issues for a flawless browsing experience.</li>
+          <li>Developed dynamic and interactive websites for enhanced user engagement.</li>
+          <li>Built reusable code libraries, saving time on future projects.</li>
+          <li>Compiled back-end data for improved front-end functionality.</li>
+          <li>Coordinated with web designers to match visual design intent while maintaining high software quality.</li>
+        </ul>
+
+        <h3>Graphic designer <span>09/2023 – 12/2026</span></h3>
+        <p><strong>Self-employed</strong> – Akure, Ondo State</p>
+        <ul>
+          <li>Worked closely with clients to create bespoke designs, meeting their unique needs.</li>
+          <li>Led brainstorming sessions amongst the creative team sparking innovation in design approach.</li>
+          <li>Streamlined design process, resulting in quicker project completion times.</li>
+          <li>Established consistent branding across multiple platforms through uniform graphical elements.</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>EDUCATION</h2>
+        <p><strong>Bachelor of Arts:</strong> Philosophy, 10/2014 –<br>
+        <strong>University of Ibadan</strong> – Ibadan, Oyo State – Honours</p>
+
+        <p><strong>Bachelor of Theology:</strong> Theology, 10/2021 –<br>
+        <strong>Urbaniana University, Rome</strong> – Urbaniana, Rome – Honours</p>
+      </div>
+      <div class="section">
+        <h2>HOBBIES AND INTEREST</h2>
+        <p>Reading, playing Games</p>
+      </div>
+    </main>
+  </div>
+
+  <!-- Download button -->
+  <div class="download-wrapper">
+    <button id="download-pdf">Download PDF</button>
+  </div>
+
+  <!-- JavaScript for PDF generation -->
+  <button id="download-btn">Download as PDF</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+  document.getElementById('download-btn').addEventListener('click', function () {
+    const element = document.querySelector('.container');
+    const opt = {
+      margin:       0.2,
+      filename:     'Anthony_Owonyi_CV.pdf',
+      image:        { type: 'jpeg', quality: 0.98 },
+      html2canvas:  { scale: 2 },
+      jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+    };
+    html2pdf().set(opt).from(element).save();
+  });
+</script>
+</body>
+</html>
